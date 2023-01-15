@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Ubuntu Mono', monospace;
+    font-weight: bold;
+    color: #06283D;
+    text-shadow: 3px, 3px, 3px rgb(152, 152, 152)
+}
+
+
+body {
+    background-image: url(sky.jpg);
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+#weatherIcon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 700px;
+    top: 380px;
+
+}
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin-left: 200px;
+    margin-right: 200px;
+    gap: 15px;
+    padding-bottom: 50px;
+}
+
+
+#search {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#searchBtn {
+    width: 90px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: rgb(75, 170, 230);
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+
+}
+
+
+
+
+#citySearch {
+    width: 250px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+}
+
+
+#city {
+    font-size: 80px;
+    width: 1800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.cityClass {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: 80px;
+    width: 600px;
+
+}
+
+.countryClass {
+    height: 80px;
+    width: 600px;
+}
+
+
+#date {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+
+#temp {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+
+#cloudiness {
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.humidityClass {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.windSpeedClass {
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+
+
+#duringDay {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 200px;
+    margin-right: 200px;
+    height: 200px;
+    align-items: center;
+}
+
+
+.timeOfDay {
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 35px;
+    gap: 5px;
+}
+
+
+#morning {
+
+}
+
+
+#day {
+
+}
+
+
+#evening {
+
+}
+
+
+#night {
+
+}
+
+
+#weekForecast {
+    display: none;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 180px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 10px;
+}
+
+
+#changeBtn {
+    width: 250px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: rgb(75, 170, 230);
+    cursor: pointer;
+    border: none;
+}
+
+
+.dayOfWeek {
+    height: 190px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    gap: 5px;
+}
+
+
+.weekDate {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+
+.weekTemp {
+    font-size: 30px;
+}
+
+
+.timeOfDay img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.dayOfWeek img {
+    width: 100px;
+    height: 100px;
+}

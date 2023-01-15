@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="weatherIcon">
+        <img class="iconClass">
+    </div>
+    <div id="main">
+        <div id="search">
+            <input type="text" id="citySearch" placeholder="Search city">
+            <button id="searchBtn">Search</button>
+        </div>
+        <div id="city">
+            <p class="cityClass">City,&nbsp</p>
+            <p class="countryClass">Country</p>
+        </div>
+        <div id="date">
+            <p>Day</p>
+            <p class="localtimeClass">Date</p>
+        </div>
+        <div id="temp">
+            <p class="tempClass">Temp&degC</p>
+            <p class="humidityClass">Humidity - %</p>
+            <p class="windSpeedClass">Wind speed - km/h</p>
+        </div>
+        <div id="cloudiness">
+            <p class="cloudinessClass">Cloudiness</p>
+        </div>
+    </div>
+
+    <div id="duringDay">
+        <div id="morning" class="timeOfDay">
+            <p>Morning 6:00</p>
+            <p class="morningClass">Temp&degC</p>
+            <img class="morningIconClass">
+        </div>
+        <div id="day" class="timeOfDay">
+            <p>Day 12:00</p>
+            <p class="dayClass">Temp&degC</p>
+            <img class="dayIconClass">
+        </div>
+        <div id="evening" class="timeOfDay">
+            <p>Evening 18:00</p>
+            <p class="eveningClass">Temp&degC</p>
+            <img class="eveningIconClass">
+        </div>
+        <div id="night" class="timeOfDay">
+            <p>Night 24:00</p>
+            <p class="nightClass">Temp&degC</p>
+            <img class="nightIconClass">
+        </div>
+    </div> 
+
+    <div id="btnDiv">
+<button id="changeBtn">7 day forecast</button>
+    </div>
+
+    <div id="weekForecast">
+        <div id="day1" class="dayOfWeek">
+            <p>Day 1</p>
+            <p id="day1date" class="weekDate">Date</p>
+            <p id="day1MaxTemp" class="weekTemp">Max Temp&degC</p>
+            <p id="day1MinTemp">Min Temp&degC</p>
+            <img id="day1Icon">
+        </div>
+        <div id="day2" class="dayOfWeek">
+            <p>Day 2</p>
+            <p id="day2date" class="weekDate">Date</p>
+            <p id="day2MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day2MinTemp">Min Temp&degC</p>
+            <img id="day2Icon">
+        </div>
+        <div id="day3" class="dayOfWeek">
+            <p>Day 3</p>
+            <p id="day3date" class="weekDate">Date</p>
+            <p id="day3MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day3MinTemp">Min Temp&degC</p>
+            <img id="day3Icon">
+        </div>
+        <div id="day4" class="dayOfWeek">
+            <p>Day 4</p>
+            <p id="day4date" class="weekDate">Date</p>
+            <p id="day4MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day4MinTemp">Min Temp&degC</p>
+            <img id="day4Icon">
+        </div>
+        <div id="day5" class="dayOfWeek">
+            <p>Day 5</p>
+            <p id="day5date" class="weekDate">Date</p>
+            <p id="day5MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day5MinTemp">Min Temp&degC</p>
+            <img id="day5Icon">
+        </div>
+        <div id="day6" class="dayOfWeek">
+            <p>Day 6</p>
+            <p id="day6date" class="weekDate">Date</p>
+            <p id="day6MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day6MinTemp">Min Temp&degC</p>
+            <img id="day6Icon">
+        </div>
+        <div id="day7" class="dayOfWeek">
+            <p>Day 7</p>
+            <p id="day7date" class="weekDate">Date</p>
+            <p id="day7MaxTemp" class="weekTemp">Max Tem&degC</p>
+            <p id="day7MinTemp">Min Temp&degC</p>
+            <img id="day7Icon">
+        </div>
+    </div>
+    <script src="app.js"></script>  
+</body>
+</html>
