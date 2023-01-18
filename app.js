@@ -9,6 +9,9 @@ let weather = {
     .then((data) => this.displayWeather(data));
   }, 
   displayWeather: function(data) {
+    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+
     const { name, country, localtime } = data.location;
     const { temp_c, humidity, wind_kph } = data.current;
     const { text, icon } = data.current.condition;
@@ -26,13 +29,17 @@ let weather = {
     const eveningIcon = data.forecast.forecastday[0].hour[18].condition.icon;
     const nightIcon = data.forecast.forecastday[1].hour[0].condition.icon;
 
-
     console.log(name, country, localtime, temp_c, humidity, wind_kph, text, icon,
     date, maxtemp_c, mintemp_c, time, morningTemp, dayTemp, eveningTemp, nightTemp,
     morningIcon, dayIcon, eveningIcon, nightIcon);
+
+    console.log(date);
+
+    const dateFormatted = new Date(date);
+
+    console.log(dateFormatted.getDay());
     
-    document.querySelector(".cityClass").innerText = name + " - ";
-    document.querySelector(".countryClass").innerText = " " + country;
+    document.querySelector(".cityClass").innerText = `${name} - ${country}`;
     document.querySelector(".localtimeClass").innerText = localtime;
     document.querySelector(".tempClass").innerText = temp_c + "°C";
     document.querySelector(".humidityClass").innerText = "Humidity - " + humidity + "%";
@@ -50,7 +57,25 @@ let weather = {
     document.querySelector(".eveningIconClass").src = "https:" + eveningIcon;
     document.querySelector(".nightIconClass").src = "https:" + nightIcon;
 
+
+    
+
+    document.querySelector("#today").innerText = weekdays[dateFormatted.getDay()];
+
+
+    document.querySelector("#day1Name").innerText = weekdays[dateFormatted.getDay()];
+    document.querySelector("#day2Name").innerText = weekdays[dateFormatted.getDay() + 1];
+    document.querySelector("#day3Name").innerText = weekdays[dateFormatted.getDay() + 2];
+    document.querySelector("#day4Name").innerText = weekdays[dateFormatted.getDay() + 3];
+    document.querySelector("#day5Name").innerText = weekdays[dateFormatted.getDay() + 4];
+    document.querySelector("#day6Name").innerText = weekdays[dateFormatted.getDay() + 5];
+    document.querySelector("#day7Name").innerText = weekdays[dateFormatted.getDay() + 6];
+
+    const today = weekdays[dateFormatted.getDay()];
+
+
     for (let i = 0; i <= 6; i++) {
+      let weekName = ["#day1Name", "#day2Name", "#day3Name", "#day4Name", "#day5Name", "#day6Name", "#day7Name"];
       let weekDate = ["#day1date", "#day2date","#day3date","#day4date","#day5date","#day6date","#day7date"];
       let weekMaxTemp = ["#day1MaxTemp", "#day2MaxTemp", "#day3MaxTemp", "#day4MaxTemp", "#day5MaxTemp", "#day6MaxTemp", "#day7MaxTemp"];
       let weekMinTemp = ["#day1MinTemp", "#day2MinTemp", "#day3MinTemp", "#day4MinTemp", "#day5MinTemp", "#day6MinTemp", "#day7MinTemp"];
@@ -61,25 +86,25 @@ let weather = {
       document.querySelector(weekMinTemp[i]).innerText = data.forecast.forecastday[i].day.mintemp_c + "°C";
       document.querySelector(weekIcon[i]).src = "https:" + data.forecast.forecastday[i].day.condition.icon;
     };
-
-
-
-
-
   },
   search: function () {
     this.fetchWeather(document.querySelector("#citySearch").value);
   }
 
-  
 
-  
-    
 };
 
-document.querySelector("#searchBtn").addEventListener("click", function (){
+document.querySelector("#searchBtn").addEventListener("click", function (e){
+  e.preventDefault();
   weather.search();
 });
+
+document.querySelector("#search").addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.key == "Enter") {
+    weather.search();
+  }
+})
 
 const btn3 = document.querySelector("#changeBtn");
 const weekForecastDiv = document.querySelector("#weekForecast");
@@ -88,15 +113,5 @@ btn3.addEventListener("click", function (){
   weekForecastDiv.style.display = "flex";
 
 })
-
-document
-.querySelector("#searchBtn")
-.querySelector("keypress", function(event){
-  if (event.key == "Enter") {
-    
-  }
-});
-
-
 
 weather.fetchWeather("Warsaw");

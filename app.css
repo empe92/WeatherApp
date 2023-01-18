@@ -17,7 +17,6 @@ body {
 img {
     width: 100%;
     height: 100%;
-    border: none;
 }
 
 
@@ -27,7 +26,6 @@ img {
     height: 100px;
     right: 700px;
     top: 380px;
-
 }
 
 
@@ -49,6 +47,7 @@ img {
     margin-bottom: 20px;
 }
 
+
 #searchBtn {
     width: 90px;
     border-radius: 50px;
@@ -57,10 +56,7 @@ img {
     cursor: pointer;
     border: none;
     padding: 5px;
-
 }
-
-
 
 
 #citySearch {
@@ -81,21 +77,15 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
+
 
 .cityClass {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: center;
     height: 80px;
-    width: 600px;
-
-}
-
-.countryClass {
-    height: 80px;
-    width: 600px;
+    width: 1500px;
 }
 
 
@@ -124,17 +114,17 @@ img {
     font-size: 30px;
 }
 
+
 .humidityClass {
     font-size: 30px;
     padding: 10px;
 }
 
+
 .windSpeedClass {
     font-size: 30px;
     padding: 10px;
 }
-
-
 
 
 #duringDay {
@@ -157,26 +147,6 @@ img {
     align-items: center;
     font-size: 35px;
     gap: 5px;
-}
-
-
-#morning {
-
-}
-
-
-#day {
-
-}
-
-
-#evening {
-
-}
-
-
-#night {
-
 }
 
 
