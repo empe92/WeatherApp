@@ -37,6 +37,7 @@ let weather = {
 
     const dateFormatted = new Date(date);
 
+
     console.log(dateFormatted.getDay());
     
     document.querySelector(".cityClass").innerText = `${name} - ${country}`;
@@ -60,19 +61,7 @@ let weather = {
 
     
 
-    document.querySelector("#today").innerText = weekdays[dateFormatted.getDay()];
-
-
-    document.querySelector("#day1Name").innerText = weekdays[dateFormatted.getDay()];
-    document.querySelector("#day2Name").innerText = weekdays[dateFormatted.getDay() + 1];
-    document.querySelector("#day3Name").innerText = weekdays[dateFormatted.getDay() + 2];
-    document.querySelector("#day4Name").innerText = weekdays[dateFormatted.getDay() + 3];
-    document.querySelector("#day5Name").innerText = weekdays[dateFormatted.getDay() + 4];
-    document.querySelector("#day6Name").innerText = weekdays[dateFormatted.getDay() + 5];
-    document.querySelector("#day7Name").innerText = weekdays[dateFormatted.getDay() + 6];
-
-    const today = weekdays[dateFormatted.getDay()];
-
+   
 
     for (let i = 0; i <= 6; i++) {
       let weekName = ["#day1Name", "#day2Name", "#day3Name", "#day4Name", "#day5Name", "#day6Name", "#day7Name"];
@@ -80,7 +69,11 @@ let weather = {
       let weekMaxTemp = ["#day1MaxTemp", "#day2MaxTemp", "#day3MaxTemp", "#day4MaxTemp", "#day5MaxTemp", "#day6MaxTemp", "#day7MaxTemp"];
       let weekMinTemp = ["#day1MinTemp", "#day2MinTemp", "#day3MinTemp", "#day4MinTemp", "#day5MinTemp", "#day6MinTemp", "#day7MinTemp"];
       let weekIcon = ["#day1Icon", "#day2Icon", "#day3Icon", "#day4Icon", "#day5Icon", "#day6Icon", "#day7Icon"];
+      const datedate = new Date(data.forecast.forecastday[i].date);
+      console.log(datedate.getDay());
 
+
+      document.querySelector(weekName[i]).innerText = weekdays[datedate.getDay()];
       document.querySelector(weekDate[i]).innerText = data.forecast.forecastday[i].date;
       document.querySelector(weekMaxTemp[i]).innerText = data.forecast.forecastday[i].day.maxtemp_c + "°C";
       document.querySelector(weekMinTemp[i]).innerText = data.forecast.forecastday[i].day.mintemp_c + "°C";
