@@ -58,6 +58,8 @@ let weather = {
     document.querySelector(".eveningIconClass").src = "https:" + eveningIcon;
     document.querySelector(".nightIconClass").src = "https:" + nightIcon;
 
+    document.querySelector("#today").innerText = weekdays[dateFormatted.getDay()];
+
 
     
 
